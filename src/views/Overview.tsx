@@ -6,7 +6,7 @@ import TransactionList from '../components/TransactionList';
 import { Wallet, Users, BarChart3, TrendingUp } from 'lucide-react';
 
 const Overview: React.FC = () => {
-  // Get the most recent values for the cards
+ 
   const currentTVL = tvlData.total[tvlData.total.length - 1].value;
   const previousTVL = tvlData.total[tvlData.total.length - 2].value;
   const tvlChange = ((currentTVL - previousTVL) / previousTVL) * 100;
@@ -15,13 +15,13 @@ const Overview: React.FC = () => {
   const previousUsers = userCountData.total[userCountData.total.length - 2].value;
   const userChange = ((currentUsers - previousUsers) / previousUsers) * 100;
   
-  // Calculate total bSOL used in DeFi
+ 
   const totalBsolInDefi = defiProtocols.reduce((sum, protocol) => sum + protocol.bsolUsed, 0);
   
-  // Calculate average APY across protocols
+ 
   const avgApy = defiProtocols.reduce((sum, protocol) => sum + protocol.apy, 0) / defiProtocols.length;
 
-  // Format large numbers
+ 
   const formatLargeNumber = (value: number): string => {
     if (value >= 1000000) {
       return `$${(value / 1000000).toFixed(1)}M`;

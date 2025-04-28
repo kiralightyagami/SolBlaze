@@ -3,10 +3,10 @@ import { defiProtocols } from '../data/mockData';
 import ProtocolCard from '../components/ProtocolCard';
 
 const DefiUsage: React.FC = () => {
-  // Calculate total bSOL used in DeFi
+ 
   const totalBsolInDefi = defiProtocols.reduce((sum, protocol) => sum + protocol.bsolUsed, 0);
   
-  // Group protocols by category
+ 
   const protocolsByCategory = defiProtocols.reduce((acc, protocol) => {
     if (!acc[protocol.category]) {
       acc[protocol.category] = [];
@@ -15,7 +15,7 @@ const DefiUsage: React.FC = () => {
     return acc;
   }, {} as Record<string, typeof defiProtocols>);
 
-  // Calculate bSOL usage percentage by category
+  
   const categoryUsage = Object.entries(protocolsByCategory).map(([category, protocols]) => {
     const categoryTotal = protocols.reduce((sum, protocol) => sum + protocol.bsolUsed, 0);
     return {
@@ -25,7 +25,7 @@ const DefiUsage: React.FC = () => {
     };
   }).sort((a, b) => b.total - a.total);
 
-  // Format large numbers
+  
   const formatLargeNumber = (value: number): string => {
     if (value >= 1000000) {
       return `$${(value / 1000000).toFixed(2)}M`;
