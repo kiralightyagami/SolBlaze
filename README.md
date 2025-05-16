@@ -1,13 +1,21 @@
 # SolBlaze
 
-A modern web application built with React, TypeScript, and Vite, featuring a beautiful UI powered by Tailwind CSS and Tremor components.
+A modern web application built with React, TypeScript, and Vite, featuring a beautiful UI powered by Tailwind CSS and Tremor components. The dashboard includes AI assistance powered by Google's Gemini 2.0 Flash model.
 
+## 🌟 Features
+
+- **Modern Analytics Dashboard**: Visualize Solana liquid staking data with interactive charts and metrics
+- **AI Assistant**: Get insights and answers about Solana blockchain using Gemini 2.0 Flash AI
+- **Dark/Light Mode**: Toggle between dark and light themes for comfortable viewing
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Social Integrations**: Connect with us via GitHub, Twitter, and LinkedIn
 
 ## 📦 Prerequisites
 
 - Node.js (v16 or higher)
 - npm or yarn package manager
 - Docker and Docker Compose (optional, for containerized deployment)
+- Gemini API key (for AI assistant functionality)
 
 ## 🛠️ Installation
 
@@ -24,6 +32,13 @@ cd SolBlaze
 npm install
 # or
 yarn install
+```
+
+3. Set up environment variables:
+- Create a `.env` file in the root directory
+- Add your Gemini API key:
+```
+VITE_GEMINI_API_KEY=your_api_key_here
 ```
 
 ### Docker Deployment
@@ -98,6 +113,8 @@ The docker-compose.yml file provides additional features:
 ```
 src/
 ├── components/     # Reusable UI components
+│   └── AIAssistant/ # AI assistant components
+├── services/      # Service integrations (Gemini AI, etc.)
 ├── views/         # Page components
 ├── data/          # Data and configuration
 ├── types/         # TypeScript type definitions
@@ -115,6 +132,12 @@ npm run lint
 # or
 yarn lint
 ```
+
+## 🔗 Connect With Us
+
+- GitHub: [https://github.com/kiralightyagami/SolBlaze](https://github.com/kiralightyagami/SolBlaze)
+- Twitter: [https://x.com/ShrivasAsvin](https://x.com/ShrivasAsvin)
+- LinkedIn: [https://www.linkedin.com/in/asvin-shrivas/](https://www.linkedin.com/in/asvin-shrivas/)
 
 ## 📝 License
 

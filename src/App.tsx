@@ -8,24 +8,25 @@ import DefiUsage from './views/DefiUsage';
 import Strategies from './views/Strategies';
 import Transactions from './views/Transactions';
 import Validators from './views/Validators';
+import AIAssistant from './components/AIAssistant/AIAssistant';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState('overview');
 
-  // Initialize dark mode based on user preference
+  
   useEffect(() => {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setDarkMode(true);
     }
   }, []);
 
-  // Toggle dark mode
+  
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
   
-  // Render the active tab content
+  
   const renderTabContent = () => {
     switch (activeTab) {
       case 'overview':
@@ -69,6 +70,8 @@ function App() {
             {renderTabContent()}
           </main>
         </div>
+        
+        <AIAssistant />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sun, Moon, Flame } from 'lucide-react';
+import { Sun, Moon, Flame, Github, Twitter, Linkedin } from 'lucide-react';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -19,6 +19,33 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         </div>
 
         <div className="flex items-center space-x-4">
+          <a 
+            href="https://github.com/kiralightyagami/SolBlaze" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="GitHub"
+          >
+            <Github className="h-5 w-5 text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" />
+          </a>
+          <a 
+            href="https://x.com/ShrivasAsvin" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Twitter"
+          >
+            <Twitter className="h-5 w-5 text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/asvin-shrivas/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-5 w-5 text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-white" />
+          </a>
           <button 
             onClick={toggleDarkMode}
             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
